@@ -41,7 +41,7 @@ describe("Windows test from Node", function () {
     .launchApp() //this is to open Outlook again AFTER the splash window loads
     .waitForElementByClassName('NetUIRibbonTab', asserters.isDisplayed, 3000, 300)
     .elementByXPath('/Window/Pane[1]/ToolBar/Pane/Pane/Pane/Pane/Pane/Group/Group[1]/Button').click()
-    .text().should.eventually.include('New Email');
+    .text().should.eventually.include('New Email')
   });
 
   it("should be able to open the Outreach plugin", function () {
@@ -62,7 +62,7 @@ describe("Windows test from Node", function () {
       .type('jenni.bradstreet@outreach.io') // need a dummy outreach account to login with
       .elementByName('Next').click()
       .elementByName('Password').click()
-      .type('********') // need a dummy outreach account password
+      .type('Pewpewpew1!') // need a dummy outreach account password
       .elementByXPath('/Window/Window/Window/Group/Group/Pane/Pane/Pane/Pane/Pane/Pane/Pane/Pane/Pane/Button').click() // Xpath for sign in button
   })
 
