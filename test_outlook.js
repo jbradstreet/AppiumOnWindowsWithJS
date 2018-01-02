@@ -59,7 +59,7 @@ describe("Windows test from Node", function () {
       .elementByNameIfExists('Sign In').click()
       .windowHandles().then(handles => driver.window(handles[0]))
       .elementByName('Email').click()
-      .type('jenni.bradstreet@outreach.io') // need a dummy outreach account to send test to
+      .type('jenni.bradstreet@outreach.io') // need a dummy outreach account to login with
       .elementByName('Next').click()
       .elementByName('Password').click()
       .type('********') // need a dummy outreach account password
